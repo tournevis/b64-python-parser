@@ -1,0 +1,17 @@
+{
+  "name": "b64-python-parser",
+  "version": "1.0.0",
+  "description": "A node js module that parse base64 encoded data from python . ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "python",
+    "b64",
+    "base",
+    "64"
+  ],
+  "author": "Arthur Rob <arthur@karos.fr> (http://www.karos.fr)",
+  "license": "ISC"
+}
