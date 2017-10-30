@@ -2,7 +2,7 @@ function b64PythonParser(b64String){
   return new Promise((resolve, reject) => {
     try {
       var rawB64 = atob(b64String)
-      let utfDecoding = this.utf8Decode(rawB64)
+      let utfDecoding = utf8Decode(rawB64)
       resolve(utfDecoding)
     } catch (err) {
       reject(err)
@@ -17,13 +17,13 @@ function btoa(str) {
 }
 
 function atob(str) {
-  // normal window
-  if (window && 'function' === typeof window.atob) {
-    return window.atob(str);
-  }
+
   // browserify (web worker)
-  else if ('function' === typeof Buffer) {
+  if ('function' === typeof Buffer) {
     return new Buffer(str, 'base64').toString('binary');
+  }// normal window
+  else if (window) {
+    return 'function' === typeof window.atob && window.atob(str);
   }
   // ios web worker with base64js
   else if (window && 'object' === typeof window.base64js) {
