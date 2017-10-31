@@ -28,7 +28,7 @@ b64PythonParser('SG9sYSwgSGVsbG8sIEJvbmpvdXIgIQ==').then(function(res){
 Or as a node module :
 
 ```js
-const b64PythonParser = require('b64PythonParser')
+const b64PythonParser = require('b64-python-parser')
 
 b64PythonParser('SG9sYSwgSGVsbG8sIEJvbmpvdXIgIQ==').then( res => {
   console.log(res);
