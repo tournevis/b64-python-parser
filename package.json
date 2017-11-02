@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "A node js module that parse base64 encoded data from python. ",
   "main": "index.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/tournevis/b64-python-parser.git"
+  },
   "scripts": {
     "test": "node test/test.js"
   },
