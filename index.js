@@ -1,9 +1,9 @@
 (function(root){
   function b64PythonParser(b64String){
-    return new Promise((resolve, reject) => {
+    return new Promise(function(resolve, reject) {
       try {
         var rawB64 = atob(b64String)
-        let utfDecoding = utf8Decode(rawB64)
+        var utfDecoding = utf8Decode(rawB64)
         resolve(utfDecoding)
       } catch (err) {
         reject(err)
@@ -20,7 +20,7 @@
   function atob(str) {
     /*
       Based on this Repo :
-      https://github.com/node-browser-compat/btoa  
+      https://github.com/node-browser-compat/btoa
     */
     // browserify (web worker)
     if (root && 'function' === typeof root.atob) {
